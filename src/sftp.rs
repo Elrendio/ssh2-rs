@@ -397,8 +397,7 @@ impl Drop for Sftp {
 }
 
 impl File {
-    /// Wraps a raw pointer in a new File structure tied to the lifetime of the
-    /// given session.
+    /// Wraps a raw pointer in a new File structure.
     ///
     /// This consumes ownership of `raw`.
     unsafe fn from_raw(sftp: &Sftp, raw: *mut raw::LIBSSH2_SFTP_HANDLE) -> File {
